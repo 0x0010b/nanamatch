@@ -13,7 +13,7 @@ App in Swift 4 - Xcode
 
 ![mockups - nanamatch (ios)](https://github.com/grgrou/nanamatch/blob/master/mockups%20-%20nanamatch.jpeg)
 
-## Authors
+## Developers
 
 * **Felix Chacaltana** - [grgrou](https://github.com/grgrou)
 * **Ernesto Gaspard**  - [ernestoGaspard](https://github.com/ernestoGaspard)
