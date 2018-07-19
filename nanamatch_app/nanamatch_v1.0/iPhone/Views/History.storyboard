@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hYG-En-tPI">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History View Controller-->
+        <scene sceneID="KRp-Fm-QwJ">
+            <objects>
+                <viewController storyboardIdentifier="HistoryViewController" id="hYG-En-tPI" customClass="HistoryViewController" customModule="nanamatch_v1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R1b-4G-Q7I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vdQ-ng-07I"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pvm-Kh-7MM">
+                        <barButtonItem key="leftBarButtonItem" image="backButton" id="FFt-af-1dw">
+                            <color key="tintColor" red="0.68627450980000004" green="0.7725490196" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backToSearchViewController:" destination="hYG-En-tPI" id="iCP-W2-l5A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="ocv-Wq-Iaa" kind="unwind" identifier="unwindHistoryToSearch" customClass="UnwindSegueLeftToRight" customModule="nanamatch_v1_0" customModuleProvider="target" unwindAction="unwindToSearchViewController:" id="rw5-vh-Yf5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtQ-xB-qct" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ocv-Wq-Iaa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="-203"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backButton" width="24" height="24"/>
+    </resources>
+</document>

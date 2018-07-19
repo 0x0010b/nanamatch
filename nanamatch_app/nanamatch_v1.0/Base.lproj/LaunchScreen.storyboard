@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="backgroundSplash" translatesAutoresizingMaskIntoConstraints="NO" id="9NL-gf-Xpd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="logoSplashNanamatch" translatesAutoresizingMaskIntoConstraints="NO" id="sDN-7x-aki">
+                                <rect key="frame" x="112" y="112" width="96" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="131-xt-RSC"/>
+                                    <constraint firstAttribute="height" constant="184" id="E09-yJ-vmJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqm-qw-lAQ">
+                                <rect key="frame" x="95" y="307" width="130" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xN1-YT-8Om"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9NL-gf-Xpd" secondAttribute="bottom" id="2Jo-W9-qon"/>
+                            <constraint firstItem="9NL-gf-Xpd" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="C5r-Ta-Vno"/>
+                            <constraint firstAttribute="trailing" secondItem="9NL-gf-Xpd" secondAttribute="trailing" id="M0H-6C-PdI"/>
+                            <constraint firstItem="9NL-gf-Xpd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="NkV-pQ-fGQ"/>
+                            <constraint firstItem="sDN-7x-aki" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="O8o-6k-zTN"/>
+                            <constraint firstItem="Nqm-qw-lAQ" firstAttribute="centerX" secondItem="sDN-7x-aki" secondAttribute="centerX" id="U8p-5g-xwe"/>
+                            <constraint firstItem="Nqm-qw-lAQ" firstAttribute="top" secondItem="sDN-7x-aki" secondAttribute="bottom" constant="11" id="Y9W-gy-hkZ"/>
+                            <constraint firstItem="sDN-7x-aki" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-80" id="tfF-iN-DXJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.6305418719212"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundSplash" width="160" height="284"/>
+        <image name="logoSplashNanamatch" width="125" height="184"/>
+    </resources>
+</document>
