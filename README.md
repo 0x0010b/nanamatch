@@ -1,7 +1,8 @@
 # Nanamatch
-![Version](https://img.shields.io/badge/version-1.0-blue.svg)
+![Build](https://img.shields.io/badge/build-passing-green.svg)
+![Version](https://img.shields.io/badge/version-1.0.2-orange.svg)
 ![Device](https://img.shields.io/badge/device-iOS-ff69b4.svg)
-![Year](https://img.shields.io/badge/year-2018-purple.svg)
+![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
 
 <i>Nanamatch application for iOS devices.</i><br>
 Find a nanny near your location, look at the rating, request and rate.<br>
