@@ -87,10 +87,17 @@ class UserWS: NSObject {
         
     }
     
-    /*class func updateUser(_ User: @escaping Const.User) -> Void{
+    class func updateUser(_ ObjUser: UserBE, UserUpdate: @escaping Const.UserUpdate) -> Void{
         let username = UserDefaults.standard.string(forKey: "USERNAME") ?? ""
         let url = "http://nanamatch.ml"
-        let path = "update/"
-    }*/
+        let path = "client/update"
+        
+        CDMWebSender.doPOSTToURL(url, withPath: path, withParameter: ["user":username,"first_name":ObjUser.first_name,"last_name":ObjUser.last_name,"district":ObjUser.district,"address":ObjUser.address,"phone":ObjUser.phone,"cell_phone":ObjUser.cell_phone,"email":ObjUser.email])
+        { (response) in
+            let dataJSON = CDMWebResponse.toDictionary(response.JSON) ?? [:]
+            let status = Int(CDMWebResponse.toString(dataJSON["status"]) ?? "0") ?? 0
+            UserUpdate(status)
+        }
+    }
     
 }

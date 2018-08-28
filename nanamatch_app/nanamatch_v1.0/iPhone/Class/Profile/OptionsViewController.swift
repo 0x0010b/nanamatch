@@ -17,8 +17,7 @@ class OptionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.btnLogOut.gradientBorder()
-        self.btnChangePassword.gradientBorder()
+        
 
         // Do any additional setup after loading the view.
     }

@@ -15,7 +15,7 @@ class InfoProfilePageViewController: UIPageViewController, UIPageViewControllerD
     }
     
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVc(viewController: "LeftView"), self.newVc(viewController: "MiddleView")]
+        return [self.newVc(viewController: "LeftView"), self.newVc(viewController: "MiddleView"), self.newVc(viewController: "RightView")]
     }()
     
     // UIPageViewController methods

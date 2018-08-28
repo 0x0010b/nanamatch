@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, TabBarViewControllerDelegate{
+class SearchViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate{
 
     @IBOutlet weak var viewDetail: UIView!
     @IBOutlet weak var viewTabBar: UIView!
@@ -24,7 +24,6 @@ class SearchViewController: UIViewController, UIPageViewControllerDataSource, UI
     
     var controllerDetailsNana: ViewDetailsNanaViewController?
 
-    var selectedId = 0
     
     // swipe list nanas
     var pageViewController: UIPageViewController?
@@ -60,7 +59,6 @@ class SearchViewController: UIViewController, UIPageViewControllerDataSource, UI
             let contentVC = self.storyboard?.instantiateViewController(withIdentifier: "contentVC") as! ContentViewController
             contentVC.itemIndex = index
             contentVC.objNana = self.arrayNanas[index]
-            self.selectedId = index
             self.controllerDetailsNana?.objNana = self.arrayNanas[contentVC.itemIndex]
             return contentVC
         }
@@ -152,20 +150,11 @@ class SearchViewController: UIViewController, UIPageViewControllerDataSource, UI
         }
     }
     
-    @IBOutlet weak var heightConstraintViewDetail: NSLayoutConstraint!
-    @IBOutlet weak var centerConstraintViewDetail: NSLayoutConstraint!
-    
-    
-    // More details nana transition
-    func tabBarViewController(tabBarViewController: TabBarViewController, TransitionWillStart state: Bool) {
-        
-        performSegue(withIdentifier: "DetailsNanaViewController", sender: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.controllerDetailsNana?.viewExtraInformation.alpha = 0
+        
     Util.navbarAppearanceTransparent((self.navigationController?.navigationBar)!)
         
         self.loadingVC.startAnimating()
@@ -182,7 +171,6 @@ class SearchViewController: UIViewController, UIPageViewControllerDataSource, UI
             self.arrayNanas = arrayResponse
             self.createPageViewController()
             self.loadingVC.stopAnimating()
-            self.selectedId = 1
         }
     }
     
@@ -206,19 +194,10 @@ class SearchViewController: UIViewController, UIPageViewControllerDataSource, UI
         if segue.identifier == "ViewDetailsNanaViewController" {
             self.controllerDetailsNana = segue.destination as? ViewDetailsNanaViewController
         }
-        
-        if segue.identifier == "TabBarViewController" {
-            let controllerTabBar = segue.destination as? TabBarViewController
-            controllerTabBar?.delegate = self
-        }
-        
-        if segue.identifier == "DetailsNanaViewController" {
-            let controller = segue.destination as! DetailsNanaViewController
-            controller.idNana = String(self.selectedId)
-        }
     }
     
     @IBAction func unwindToSearchViewController(_ segue: UIStoryboardSegue){}
+    
     
 }
 

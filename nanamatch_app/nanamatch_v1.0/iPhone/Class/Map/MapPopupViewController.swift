@@ -12,23 +12,12 @@ class MapPopupViewController: UIViewController {
     
     @IBOutlet weak var centerConstraintPopup: NSLayoutConstraint!
     
-    @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var lblCalification: UILabel!
-    
-    @IBAction func contactAction(_ sender: UIButton) {
-        
-    }
-    
-    var objBE: NanaBE!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.alpha = 0
         self.centerConstraintPopup.constant = 120
-        
-        self.lblName.text = self.objBE.name
-        self.lblCalification.text = self.objBE.calification
     }
     
     override func viewDidAppear(_ animated: Bool) {

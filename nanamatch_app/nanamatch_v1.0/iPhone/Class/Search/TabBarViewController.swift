@@ -8,19 +8,11 @@
 
 import UIKit
 
-protocol TabBarViewControllerDelegate {
-    func tabBarViewController(tabBarViewController: TabBarViewController, TransitionWillStart state: Bool)
-}
 class TabBarViewController: UIViewController {
-    
-    var delegate: TabBarViewControllerDelegate?
-    
-    @IBAction func moreDetailsAction(_ sender: UIButton) {
-        self.delegate?.tabBarViewController(tabBarViewController: self, TransitionWillStart: true)
-    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 

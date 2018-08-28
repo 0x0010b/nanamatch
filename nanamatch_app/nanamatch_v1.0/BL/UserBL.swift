@@ -23,4 +23,8 @@ class UserBL: NSObject {
     class func dataUser(_ User: @escaping Const.User) -> Void{
         UserWS.dataUser(User)
     }
+    
+    class func updateUser(_ ObjUser: UserBE, UserUpdate: @escaping Const.UserUpdate) -> Void {
+        UserWS.updateUser(ObjUser, UserUpdate: UserUpdate)
+    }
 }
