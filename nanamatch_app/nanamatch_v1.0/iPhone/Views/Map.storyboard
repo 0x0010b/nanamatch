@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gv8-6F-e7G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gv8-6F-e7G">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -70,23 +70,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmE-ow-Z4V">
                                 <rect key="frame" x="16" y="266" width="288" height="113"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Antonia Zorrilla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lig-qm-8L3">
-                                        <rect key="frame" x="16" y="20" width="170" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lig-qm-8L3">
+                                        <rect key="frame" x="16" y="20" width="200" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="LUP-Sr-PX4"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mea-bc-lKV">
-                                        <rect key="frame" x="242" y="20" width="38" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mea-bc-lKV">
+                                        <rect key="frame" x="237" y="20" width="43" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Kre-nj-r6N"/>
+                                            <constraint firstAttribute="width" constant="43" id="uPL-Gc-DtR"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.77681993130000004" blue="0.001346542883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGF-0K-UnZ" customClass="ButtonDesign" customModule="nanamatch_v1_0" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGF-0K-UnZ" customClass="ButtonDesign" customModule="nanamatch_v1_0" customModuleProvider="target">
                                         <rect key="frame" x="73" y="62" width="143" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="Xe1-h4-P2F"/>
+                                            <constraint firstAttribute="width" constant="143" id="yOV-Ke-tDa"/>
+                                        </constraints>
                                         <state key="normal" title="Contact">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -101,12 +109,25 @@
                                                 <real key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="contactAction:" destination="3ve-ss-GFA" eventType="touchUpInside" id="C3t-nE-ctI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Lig-qm-8L3" firstAttribute="leading" secondItem="wmE-ow-Z4V" secondAttribute="leading" constant="16" id="29w-ls-AWS"/>
+                                    <constraint firstAttribute="trailing" secondItem="mea-bc-lKV" secondAttribute="trailing" constant="8" id="5ly-zQ-Ptu"/>
                                     <constraint firstAttribute="height" constant="113" id="8X6-Ek-VVN"/>
+                                    <constraint firstItem="YGF-0K-UnZ" firstAttribute="top" secondItem="Lig-qm-8L3" secondAttribute="bottom" constant="21" id="Kum-7E-TEz"/>
+                                    <constraint firstItem="mea-bc-lKV" firstAttribute="top" secondItem="wmE-ow-Z4V" secondAttribute="top" constant="20" id="NDd-au-czM"/>
                                     <constraint firstAttribute="width" constant="288" id="Uf4-V3-Ier"/>
+                                    <constraint firstAttribute="trailing" secondItem="YGF-0K-UnZ" secondAttribute="trailing" constant="72" id="YEp-Wz-a0x"/>
+                                    <constraint firstItem="YGF-0K-UnZ" firstAttribute="leading" secondItem="wmE-ow-Z4V" secondAttribute="leading" constant="73" id="a2j-Pm-Xru"/>
+                                    <constraint firstAttribute="bottom" secondItem="mea-bc-lKV" secondAttribute="bottom" constant="72" id="bhE-VG-6tt"/>
+                                    <constraint firstItem="mea-bc-lKV" firstAttribute="leading" secondItem="Lig-qm-8L3" secondAttribute="trailing" constant="21" id="i6v-0w-8dw"/>
+                                    <constraint firstItem="Lig-qm-8L3" firstAttribute="top" secondItem="wmE-ow-Z4V" secondAttribute="top" constant="20" id="j2J-TC-i7m"/>
+                                    <constraint firstAttribute="bottom" secondItem="YGF-0K-UnZ" secondAttribute="bottom" constant="18" id="mkr-GD-s76"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -140,6 +161,8 @@
                     </view>
                     <connections>
                         <outlet property="centerConstraintPopup" destination="bgL-Eo-oXc" id="6ic-md-jDk"/>
+                        <outlet property="lblCalification" destination="mea-bc-lKV" id="Rfb-dF-4cs"/>
+                        <outlet property="lblName" destination="Lig-qm-8L3" id="0UZ-Mb-vNF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbC-Ec-HLt" userLabel="First Responder" sceneMemberID="firstResponder"/>

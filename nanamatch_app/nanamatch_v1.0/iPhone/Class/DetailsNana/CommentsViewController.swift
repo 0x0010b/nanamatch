@@ -1,26 +1,18 @@
 //
-//  TabBarViewController.swift
+//  CommentsViewController.swift
 //  nanamatch_v1.0
 //
-//  Created by Alumno-DG on 26/06/18.
+//  Created by Alumno-DG on 3/07/18.
 //  Copyright © 2018 Ernesto Gaspard. All rights reserved.
 //
 
 import UIKit
 
-protocol TabBarViewControllerDelegate {
-    func tabBarViewController(tabBarViewController: TabBarViewController, TransitionWillStart state: Bool)
-}
-class TabBarViewController: UIViewController {
-    
-    var delegate: TabBarViewControllerDelegate?
-    
-    @IBAction func moreDetailsAction(_ sender: UIButton) {
-        self.delegate?.tabBarViewController(tabBarViewController: self, TransitionWillStart: true)
-    }
-   
+class CommentsViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 

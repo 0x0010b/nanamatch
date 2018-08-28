@@ -17,10 +17,8 @@ class Const: NSObject {
     
     // Search & Profile Closures
     typealias Nana = (_ response: [NanaBE]) -> Void
-    
+    typealias SingleNana = (_ response: NanaBE) -> Void
 }
-
-
 
 
 

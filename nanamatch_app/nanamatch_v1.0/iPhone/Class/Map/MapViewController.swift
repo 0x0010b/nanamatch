@@ -16,6 +16,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     var locationManager = CLLocationManager()
     
     var arrayNanas = [NanaBE]()
+    var arrayMarker = [GMSMarker]()
     
     func initializeTheLocationManager() {
         locationManager.delegate = self
@@ -37,8 +38,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
-        performSegue(withIdentifier: "PopupViewController", sender: nil)
-        print("PEPITO ESTUVO AQUI")
+        performSegue(withIdentifier: "PopupViewController", sender: marker)
         return false
     }
     
@@ -61,12 +61,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
                 nana.icon = UIImage(named: "nanaMarker")
                 nana.map = self.mapFindNanas
                 
+                self.arrayMarker.append(nana)
             }
         }
         
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "PopupViewController" {
+            let controller = segue.destination as! MapPopupViewController
+            controller.objBE = self.arrayNanas[self.arrayMarker.index(of: sender as! GMSMarker)!]
+        }
+    }
     
     
     override func viewDidAppear(_ animated: Bool) {

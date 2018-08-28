@@ -24,11 +24,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4f-Ea-EMI">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4f-Ea-EMI" customClass="ViewDesign" customModule="nanamatch_v1_0" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="381" width="320" height="260"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="260" id="tOq-Jk-XOp"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusTop">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="A5e-zv-08j" kind="embed" identifier="ViewDetailsNanaViewController" id="Y9R-4p-vBx"/>
                                 </connections>
@@ -72,9 +78,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="centerConstraint" destination="NpG-v0-hyg" id="GOI-9B-Fwk"/>
+                        <outlet property="centerConstraintViewDetail" destination="NpG-v0-hyg" id="MGC-86-mik"/>
+                        <outlet property="heightConstraintViewDetail" destination="tOq-Jk-XOp" id="Vdc-E0-6nj"/>
                         <outlet property="loadingVC" destination="iov-jR-SEj" id="G8s-AF-HtC"/>
                         <outlet property="viewDetail" destination="c4f-Ea-EMI" id="3GW-CU-JIC"/>
                         <outlet property="viewTabBar" destination="2P8-0w-79U" id="Isk-pr-YAl"/>
+                        <segue destination="uue-Jr-NWa" kind="custom" identifier="DetailsNanaViewController" customClass="SegueBottomToTop" customModule="nanamatch_v1_0" customModuleProvider="target" id="2ed-Fl-kdG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1O-ph-cxZ" sceneMemberID="firstResponder"/>
@@ -87,7 +96,7 @@
                 <pageViewController storyboardIdentifier="pageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="uaw-Tv-UmE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWf-0g-0cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="-472"/>
+            <point key="canvasLocation" x="589" y="-472"/>
         </scene>
         <!--Content View Controller-->
         <scene sceneID="8KM-7d-hqf">
@@ -128,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cF-Vs-hYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3077" y="-564"/>
+            <point key="canvasLocation" x="3212" y="-626"/>
         </scene>
         <!--View Details Nana View Controller-->
         <scene sceneID="GGO-7p-x58">
@@ -332,6 +341,9 @@
                                     <constraint firstAttribute="width" constant="50" id="fhi-ub-axO"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="tabMore"/>
+                                <connections>
+                                    <action selector="moreDetailsAction:" destination="XtV-CU-Pu5" eventType="touchUpInside" id="tNm-cZ-fW4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5g-uk-0hM">
                                 <rect key="frame" x="89" y="35" width="17" height="18"/>
@@ -374,7 +386,15 @@
                 <viewControllerPlaceholder storyboardName="Map" referencedIdentifier="MapViewController" id="sTA-PC-H80" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ljm-pQ-Idm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2270" y="376"/>
+            <point key="canvasLocation" x="2381" y="375"/>
+        </scene>
+        <!--DetailsNanaViewController-->
+        <scene sceneID="XNV-NZ-sQD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailsNana" referencedIdentifier="DetailsNanaViewController" id="uue-Jr-NWa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLy-jN-0oY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="33"/>
         </scene>
         <!--HistoryViewController-->
         <scene sceneID="tLr-kc-VLF">

@@ -10,6 +10,8 @@ import UIKit
 
 class NanaBE: NSObject {
 
+    var id = ""
+    var age = ""
     var img  = ""
     var name = ""
     var district = ""

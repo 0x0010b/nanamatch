@@ -1,21 +1,21 @@
 //
-//  InfoProfilePageViewController.swift
+//  InfoDetailsNanaPageViewController.swift
 //  nanamatch_v1.0
 //
-//  Created by Miguel Tomairo on 7/2/18.
+//  Created by Miguel Tomairo on 7/3/18.
 //  Copyright © 2018 Ernesto Gaspard. All rights reserved.
 //
 
 import UIKit
 
-class InfoProfilePageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-    
+class InfoDetailsNanaPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+
     func newVc(viewController: String) -> UIViewController {
-        return UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: viewController)
+        return UIStoryboard(name: "DetailsNana", bundle: nil).instantiateViewController(withIdentifier: viewController)
     }
     
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVc(viewController: "LeftView"), self.newVc(viewController: "OptionsView")]
+        return [self.newVc(viewController: "LeftView"), self.newVc(viewController: "MiddleView"), self.newVc(viewController: "RightView")]
     }()
     
     // UIPageViewController methods
@@ -57,7 +57,7 @@ class InfoProfilePageViewController: UIPageViewController, UIPageViewControllerD
     }
     
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -69,11 +69,6 @@ class InfoProfilePageViewController: UIPageViewController, UIPageViewControllerD
                                animated: true,
                                completion: nil)
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 

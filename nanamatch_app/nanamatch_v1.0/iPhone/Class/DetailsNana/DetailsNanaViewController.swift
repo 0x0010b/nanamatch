@@ -9,11 +9,45 @@
 import UIKit
 
 class DetailsNanaViewController: UIViewController {
+    
+    @IBOutlet weak var loadingImg: UIActivityIndicatorView!
+    
+    @IBOutlet weak var imgNana: UIImageView!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblAge: UILabel!
+    @IBOutlet weak var lblLocation: UILabel!
+    
+    @IBOutlet weak var btnContact: UIButton!
+    
+    @IBAction func closeViewController(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "UnwindDetailsToSearch", sender: nil)
+    }
+    
+    var idNana: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        
+        self.btnContact.gradientBorder()
+        
+        self.imgNana.layer.cornerRadius = 20
+        self.loadingImg.startAnimating()
+        
+        NanaBL.singleNana(self.idNana) { (objBE) in
+            self.lblName.text = objBE.name
+            self.lblAge.text = objBE.age
+            self.lblLocation.text = objBE.district
+            
+            CDMImageDownloaded.descargarImagen(enURL: objBE.img, paraImageView: self.imgNana, conPlaceHolder: nil) { (Correct, url, img) in
+                if url == objBE.img {
+                    Animation.fadeIn(withDuration: 0.2, objUI: self.imgNana)
+                    self.imgNana.image = img
+                    self.loadingImg.stopAnimating()
+                }
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,16 +65,5 @@ class DetailsNanaViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

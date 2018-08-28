@@ -631,56 +631,27 @@
             </objects>
             <point key="canvasLocation" x="219.375" y="654.92957746478874"/>
         </scene>
-        <!--Options Table View Controller-->
-        <scene sceneID="1QF-Tv-uaW">
-            <objects>
-                <tableViewController storyboardIdentifier="RightView" id="nw3-fo-Guf" customClass="OptionsTableViewController" customModule="nanamatch_v1_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="G0m-p7-WwX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionsTableCell" id="eRD-uO-Epf">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eRD-uO-Epf" id="EWd-Lk-bFo">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="nw3-fo-Guf" id="ybS-ml-NBv"/>
-                            <outlet property="delegate" destination="nw3-fo-Guf" id="cQR-9m-pXM"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="50O-ze-r4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="911" y="655"/>
-        </scene>
         <!--Options View Controller-->
         <scene sceneID="87V-3F-Yb3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JIO-vc-oiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="MiddleView" id="gaT-rg-oas" customClass="OptionsViewController" customModule="nanamatch_v1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OptionsView" id="gaT-rg-oas" customClass="OptionsViewController" customModule="nanamatch_v1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tvf-py-8qA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jgg-NV-OSd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChangePasswordTableViewCell" id="qSU-ST-CbY">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="304" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qSU-ST-CbY" id="7hk-mk-OUZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="304" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nif-s2-mLX">
-                                                    <rect key="frame" x="15" y="11" width="290" height="22"/>
+                                                    <rect key="frame" x="15" y="11" width="274" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="PpG-Aw-plo"/>
                                                     </constraints>
@@ -699,14 +670,14 @@
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogOutTableViewCell" id="3Rj-P7-0t6">
-                                        <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="72" width="304" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Rj-P7-0t6" id="HQN-fL-Lbm">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="304" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3F0-V1-4o8">
-                                                    <rect key="frame" x="15" y="11" width="290" height="22"/>
+                                                    <rect key="frame" x="15" y="11" width="274" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="jo8-Jo-GgA"/>
                                                     </constraints>
@@ -729,16 +700,17 @@
                             </tableView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="jgg-NV-OSd" firstAttribute="leading" secondItem="tvf-py-8qA" secondAttribute="leading" id="4Ab-zE-P4l"/>
-                            <constraint firstAttribute="trailing" secondItem="jgg-NV-OSd" secondAttribute="trailing" id="Afy-pb-nlh"/>
-                            <constraint firstAttribute="bottom" secondItem="jgg-NV-OSd" secondAttribute="bottom" id="GY4-tT-y4V"/>
-                            <constraint firstItem="jgg-NV-OSd" firstAttribute="top" secondItem="tvf-py-8qA" secondAttribute="top" id="KJW-DP-Ctk"/>
+                            <constraint firstItem="jgg-NV-OSd" firstAttribute="top" secondItem="tvf-py-8qA" secondAttribute="top" id="T0D-v6-xCs"/>
+                            <constraint firstItem="jgg-NV-OSd" firstAttribute="bottom" secondItem="aoA-D3-sns" secondAttribute="bottom" id="avY-mj-Q0x"/>
+                            <constraint firstItem="jgg-NV-OSd" firstAttribute="leading" secondItem="aoA-D3-sns" secondAttribute="leading" id="hn0-BK-jfN"/>
+                            <constraint firstItem="jgg-NV-OSd" firstAttribute="trailing" secondItem="aoA-D3-sns" secondAttribute="trailing" constant="-16" id="ye5-i0-vYH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aoA-D3-sns"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIO-vc-oiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="655"/>
+            <point key="canvasLocation" x="922.5" y="654.92957746478874"/>
         </scene>
     </scenes>
     <resources>
