@@ -282,7 +282,6 @@
 				CD5A6E3F20CC403A00F456D1 /* iPhone */,
 				CD5A6E3B20CC3F7000F456D1 /* BE */,
 				CD5A6E3C20CC3F7600F456D1 /* BL */,
-				CD5A6E3A20CC3F6C00F456D1 /* DA */,
 				CD5A6E3920CC3F6500F456D1 /* WS */,
 				CD5A6E5420CC431100F456D1 /* CoreDataMedia */,
 				CD5A6E2420CC3F4A00F456D1 /* AppDelegate.swift */,
@@ -301,13 +300,6 @@
 				CDB6319220CC578400BAC440 /* UserWS.swift */,
 			);
 			path = WS;
-			sourceTree = "<group>";
-		};
-		CD5A6E3A20CC3F6C00F456D1 /* DA */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DA;
 			sourceTree = "<group>";
 		};
 		CD5A6E3B20CC3F7000F456D1 /* BE */ = {
